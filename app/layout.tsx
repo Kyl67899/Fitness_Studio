@@ -4,9 +4,6 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Fitness Studio",
   description: "Transform your body, transform your life.",
-  url: "https://fitness-studio-landing.vercel.app",
-  type: "website",
-  keywords: ["fitness", "studio", "gym", "workout", "exercise"],
 };
 
 export default function RootLayout({
