@@ -57,12 +57,12 @@ export function ContactForm() {
       <div className="flex items-center space-x-2">
         <Checkbox id="free-trial" name="free-trial" />
         <Label htmlFor="free-trial" className="text-sm sm:text-base">
-          I'm interested in the free 7-day trial
+          I&apos;m interested in the free 7-day trial
         </Label>
       </div>
       <SubmitButton />
       {formStatus === "success" && (
-        <p className="text-green-600 text-sm sm:text-base">Thank you for your message! We'll be in touch soon.</p>
+        <p className="text-green-600 text-sm sm:text-base">Thank you for your message! We&apos;ll be in touch soon.</p>
       )}
       {formStatus === "error" && (
         <p className="text-red-600 text-sm sm:text-base">

@@ -2,7 +2,9 @@
 
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const RESEND_API_KEY = "re_bcKGozrC_LFWduNB42pKSkytrUxW2Pc9T"
+
+const resend = new Resend(process.env.RESEND_API_KEY || RESEND_API_KEY)
 
 export async function submitForm(formData: FormData) {
   const name = formData.get("name") as string
