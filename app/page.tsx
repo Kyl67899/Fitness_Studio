@@ -67,11 +67,11 @@ export default function Home() {
         <section id="about">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center">About Us</h2>
           <p className="max-w-2xl mx-auto text-center mb-4 text-sm sm:text-base">
-            At FitLife Studio, we're dedicated to helping you achieve your fitness goals. Our expert trainers and
+            At FitLife Studio, we&apos;re dedicated to helping you achieve your fitness goals. Our expert trainers and
             state-of-the-art equipment provide the perfect environment for your fitness journey.
           </p>
           <p className="max-w-2xl mx-auto text-center text-sm sm:text-base">
-            Whether you're a beginner or an experienced athlete, we have programs tailored to your needs. Join us today
+            Whether you&apos;re a beginner or an experienced athlete, we have programs tailored to your needs. Join us today
             and start your transformation!
           </p>
         </section>
