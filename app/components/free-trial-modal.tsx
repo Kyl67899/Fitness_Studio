@@ -10,7 +10,9 @@ import { Input } from "@/components/ui/input";
 export function FreeTrialModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const [formStatus, setFormStatus] = useState<"idle" | "success" | "error">("idle")
 
-  async function handleSubmit(formData: FormData) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
     setFormStatus("idle")
     const result = await submitFreeTrialForm(formData)
     setFormStatus(result.success ? "success" : "error")
