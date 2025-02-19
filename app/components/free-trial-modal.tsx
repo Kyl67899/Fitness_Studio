@@ -49,7 +49,7 @@ export function FreeTrialModal({ isOpen, onClose }: { isOpen: boolean; onClose: 
           </Button>
         </form>
         {formStatus === "success" && (
-          <p className="mt-4 text-green-600">Thank you for signing up! We'll be in touch soon.</p>
+          <p className="mt-4 text-green-600">Thank you for signing up! We&apos;ll be in touch soon.</p>
         )}
         {formStatus === "error" && (
           <p className="mt-4 text-red-600">There was an error submitting your form. Please try again.</p>
