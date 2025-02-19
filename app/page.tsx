@@ -11,6 +11,7 @@ import { ContactForm } from "./components/contact-form"
 import { FreeTrialModal } from "./components/free-trial-modal"
 import { SocialLinks } from "./components/social-links"
 import { NavigationMenu } from "./components/nav-menu"
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-100">
+      <Analytics />
       <NavigationMenu />
 
       <header className="relative bg-primary text-primary-foreground pt-20 pb-12 sm:pb-16 md:pb-24">
