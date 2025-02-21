@@ -29,7 +29,7 @@ export default function Home() {
       <Analytics />
       <NavigationMenu />
 
-      <header className="relative bg-primary text-primary-foreground pt-20 pb-12 sm:pb-16 md:pb-24">
+      <section className="relative bg-primary text-primary-foreground pt-20 pb-12 sm:pb-16 md:pb-24">
         <div className="absolute inset-0 overflow-hidden">
           <video className="object-cover w-full h-full opacity-50" autoPlay loop muted playsInline>
             <source src="https://assets.mixkit.co/videos/52087/52087-720.mp4" type="video/mp4" />
@@ -38,34 +38,13 @@ export default function Home() {
         <div className="container mx-auto text-center relative z-10 px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4">Welcome to FitLife Studio</h1>
           <p className="text-xl sm:text-2xl mb-6 sm:mb-8">Transform Your Body, Transform Your Life</p>
-          <Button asChild size="lg" onClick={() => setIsModalOpen(true)}>
+          <Button className="cursor-pointer" asChild size="lg" onClick={() => setIsModalOpen(true)}>
             <span>Start Free Trial</span>
           </Button>
         </div>
-      </header>
+      </section>
 
       <main className="container mx-auto py-8 sm:py-12 space-y-12 sm:space-y-16 md:space-y-24 px-4 sm:px-6 lg:px-8">
-        <section id="fitness-video" className="relative aspect-video rounded-lg shadow-lg overflow-hidden">
-          <video className="w-full h-full object-cover" controls poster="https://assets.mixkit.co/active_storage/video_items/100546/1725385655/100546-video-360.mp4">
-            <source src="/placeholder.svg?height=720&width=1280" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <Button
-              size="lg"
-              onClick={() => {
-                const video = document.querySelector("#fitness-video video") as HTMLVideoElement
-                if (video) {
-                  video.play()
-                  ;(video.parentElement?.querySelector(".bg-black") as HTMLElement)?.remove()
-                }
-              }}
-            >
-              Play Video
-            </Button>
-          </div>
-        </section>
-
         <section id="about">
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center">About Us</h2>
           <p className="max-w-2xl mx-auto text-center mb-4 text-sm sm:text-base">
@@ -76,6 +55,27 @@ export default function Home() {
             Whether you&apos;re a beginner or an experienced athlete, we have programs tailored to your needs. Join us today
             and start your transformation!
           </p>
+        </section>
+
+        <section id="fitness-video" className="relative aspect-video rounded-lg shadow-lg overflow-hidden">
+          <video className="w-full h-full object-cover" controls poster="https://assets.mixkit.co/active_storage/video_items/100546/1725385655/100546-video-360.mp4">
+            <source src="https://videos.pexels.com/video-files/3125907/3125907-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <Button
+              size="lg"
+              onClick={() => {
+                const video = document.querySelector("#fitness-video video") as HTMLVideoElement
+                if (video) {
+                  video.play()
+                    ; (video.parentElement?.querySelector(".bg-black") as HTMLElement)?.remove()
+                }
+              }}
+            >
+              Play Video
+            </Button>
+          </div>
         </section>
 
         <Testimonials />
